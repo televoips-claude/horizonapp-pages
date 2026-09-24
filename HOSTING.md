@@ -1,27 +1,4 @@
-# Virtual Switchboard preview build (v0.2.1)
-
-This is a preview of 0.3.0 for live testing. It includes the finished parts:
-
-- **Real-Time**: contacts grouped by site and department (search, Site,
-  Department, sort), contact cards with presence, headset and live lines,
-  call queues with waiting and answered callers, agents, pinning, expand,
-  staffing, and auto attendants.
-- **Operate**: queue list with staffing bars, waiting callers longest first,
-  and the agent roster.
-- **Operator rail**: My Calls (hang up, park, decline, mute, record, keypad),
-  Call Parks, and the Dial Pad.
-- **Panels**: staff a queue, one agent's queues, expanded queue.
-- **Header**: Live indicator, your status switcher (when you are an agent in
-  the domain), the four live totals, and a domain picker for resellers.
-
-Analyze, the Wallboard, and the per-user Voicemail / Call handling / Call
-history panel show a "next build" note in this preview. Version 0.3.0 adds
-them.
-
-Buttons that change things act on the real phone system: membership and
-Taking calls switches, Max calls, status changes, dialing, hanging up,
-parking. Answer, hold, transfer and queue pickup show disabled with the
-reason, because they are PATCH requests Horizon apps cannot send yet.
+# Updating the Virtual Switchboard in Horizon (v0.3.0)
 
 This folder is the built app: the exact static files Horizon fetches. There is
 nothing to build. `remoteEntry.js` is the file Horizon loads, the hashed `.js`
@@ -46,7 +23,7 @@ Keep that URL. To update it:
    and confirm the file changed.
 3. **Deploy the new version in Horizon.** Platform -> UI SDK management ->
    Registered Apps -> **TeleVoIPs Virtual Switchboard**: set **Version** to
-   `0.2.1`, save, then press **Deploy**. Expand the row: `approved` or
+   `0.3.0`, save, then press **Deploy**. Expand the row: `approved` or
    `flagged` both load; `rejected` lists what to fix.
 4. **Open it.** Reload Horizon and go to **Apps -> Virtual Switchboard**.
 
