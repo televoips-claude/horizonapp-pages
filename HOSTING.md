@@ -1,4 +1,4 @@
-# Updating the Virtual Switchboard in Horizon (v0.3.1)
+# Updating the Virtual Switchboard in Horizon (v0.4.0)
 
 This folder is the built app: the exact static files Horizon fetches. There is
 nothing to build. `remoteEntry.js` is the file Horizon loads, the hashed `.js`
@@ -23,9 +23,10 @@ Keep that URL. To update it:
    and confirm the file changed.
 3. **Deploy the new version in Horizon.** Platform -> UI SDK management ->
    Registered Apps -> **TeleVoIPs Virtual Switchboard**: set **Version** to
-   `0.3.1`, save, then press **Deploy**. Expand the row: `approved` or
+   `0.4.0`, save, then press **Deploy**. Expand the row: `approved` or
    `flagged` both load; `rejected` lists what to fix.
-4. **Open it.** Reload Horizon and go to **Apps -> Virtual Switchboard**.
+4. **Open it.** Reload Horizon and go to **Apps -> Virtual Switchboard**. 0.4.0
+   also adds **Apps -> Call Flow** from the same app; nothing else to register.
 
 Why the version must change: Horizon pins a hash of the bytes it verified. New
 bytes under the old version fail that check in every browser and the app
