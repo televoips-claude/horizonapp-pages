@@ -42,3 +42,21 @@ browser fetch them without credentials. GitHub Pages from a private repo needs
 a paid plan, and the published site stays public either way. Nothing secret is
 in these files (no keys, no tokens, no customer data); they are the same
 JavaScript every Horizon user's browser downloads.
+
+## The short partner install (`televoips/`)
+
+One copy of 0.6.0 has a short name, for partners installing it on their own
+platform:
+
+| Field | Value |
+|---|---|
+| Name | TeleVoIPs Virtual Switchboard |
+| Webpack module | `televoips` |
+| Remote entry URL | `https://televoips-claude.github.io/horizonapp-pages/televoips/remoteEntry.js` |
+| Version | `0.6.0` |
+| Pages | `/apps/switchboard-televoips`, `/apps/call-flow-televoips` |
+
+It was built with `scripts/build-installs.mjs` (install id `televoips`, module
+`televoips`) and passed NetSapiens' bundle verifier. Never change the files in
+`televoips/`: every platform that deployed it pinned their hash. A later
+version goes in `televoips/<version>/` and is redeployed with that version.
